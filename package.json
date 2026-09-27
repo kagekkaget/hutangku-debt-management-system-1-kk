@@ -1,9 +1,11 @@
 {
-  "name": "nextjs-postgresql-template",
+  "name": "hutangku",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/pack-source.cjs",
     "build": "next build",
+    "pack": "node scripts/pack-source.cjs",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
@@ -15,6 +17,7 @@
     "jose": "^6.2.12",
     "next": "16.2.6",
     "pg": "8.20.0",
+    "qrcode": "^1.5.4",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "server-only": "^0.0.1"
@@ -23,6 +26,7 @@
     "@tailwindcss/postcss": "4.1.17",
     "@types/node": "22.19.15",
     "@types/pg": "8.18.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "drizzle-kit": "0.31.10",

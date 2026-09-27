@@ -1,7 +1,7 @@
 import { requireUser } from "@/lib/auth";
 import { waGatewayConfig } from "@/lib/wa";
 import { PageHeader } from "@/components/page-header";
-import { Badge, Card } from "@/components/ui";
+import { Badge, Button, Card } from "@/components/ui";
 import { ProfileForm, PasswordForm } from "./settings-forms";
 import { db } from "@/db";
 import { customers, debts, payments, reminderLogs } from "@/db/schema";
@@ -100,6 +100,25 @@ export default async function SettingsPage() {
                 </div>
               ))}
             </dl>
+          </Card>
+
+          <Card className="p-6">
+            <div className="flex items-center justify-between">
+              <h2 className="font-semibold text-slate-900">Source Code &amp; Lisensi</h2>
+              <Badge tone="emerald">Open Source</Badge>
+            </div>
+            <p className="mt-2 text-sm text-slate-500">
+              Aplikasi ini bersifat open source (lisensi MIT) — bebas dipelajari, diubah, dan digunakan untuk warung Anda sendiri.
+            </p>
+            <a href="/hutangku-source.zip" download className="mt-4 inline-block">
+              <Button variant="secondary">⬇ Unduh Source Code Lengkap (.zip)</Button>
+            </a>
+            <p className="mt-3 text-xs text-slate-400">
+              Open Source oleh MZF – 2026 · Dukung pengembangan via{" "}
+              <a href="https://trakteer.id/perpus_opera/" target="_blank" rel="noopener noreferrer" className="font-medium text-[#ff613b] hover:underline">
+                Trakteer
+              </a>
+            </p>
           </Card>
         </div>
       </div>
